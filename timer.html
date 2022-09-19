@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            let daniel= new Date ();
+            console.log(daniel.getFullYear()+" "+daniel.getHours());
+            console.log(daniel.getHours()+":"+daniel.getMinutes()+":"+daniel.getSeconds());
+            setInterval(()=>{
+                let a = daniel.getHours();
+                let b = daniel.getMinutes();
+                let c = daniel.getSeconds();
+                if (a<10){
+                    a = "0"+a;
+                }
+                if (b<10){
+                    b = "0"+b;
+                }
+                if (c<10){
+                    c = "0"+c;
+                }
+                document.getElementById("timer").innerHTML=a+":"+b+":"+c
+            }
+            ,1000)
+
+
+        </script>
+
+
+
+    </head>
+    <body>
+        <div id="timer">
+        
+        </div>
+
+
+    </body>
+
+
+</html>
