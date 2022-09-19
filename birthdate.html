@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            
+            let now =new Date();     
+            let yearnow= now.getFullYear();
+            let a = document.getElementById("bday").value; //get user input
+            let b = new Date(a);                     //format input to date
+            let c= b.getFullYear();                 //extract only the year from the date
+            let age =yearnow - c;
+            
+            document.getElementById('demonstration').innerHTML = age;
+
+        </script>
+
+
+
+    </head>
+  
+    <body>
+        <div> Date of Birth </div>
+        <input id="bday" type="date"> 
+        <p id="demonstration">age</p>
+
+         
+        
+    </body>
+
+</html>
