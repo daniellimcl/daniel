@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+           
+           function setlocal(){
+            const getName= document.getElementById ("entername");
+            
+               
+               localStorage.setItem("key", JSON.stringify(getName));
+               
+
+            }
+            function getlocal(){
+                console.log(localStorage.getItem(getName));
+
+             }
+                
+
+        
+        </script>
+        
+    </head>
+    <button onclick="setlocal()">get localstorage</button>
+    <button onclick="getlocal()">set localstorage</button>
+  
+    Name : <input type="text" id="entername">
+    
+
+
+
+
+</html>
