@@ -1,0 +1,11 @@
+.first{
+  background-color: rgb(177, 16, 16);
+  color: #fff;
+
+}
+.second{
+  background-color: rgba(47, 32, 49, 0.324);
+  color: #fff;
+}
+
+export default App;
