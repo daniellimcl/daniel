@@ -1,15 +1,17 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.User;
 import com.example.demo.request.RegisterRequest;
-import com.example.demo.request.mathRequest;
 import com.example.demo.response.generalResponse;
 import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 
 
 @RestController
@@ -39,7 +41,15 @@ public class UserController {
         } else {
             gr.setMessage("Login Fail");
             return ResponseEntity.badRequest().body(gr);
+
         }
 
+
+    }
+    @GetMapping("GetUsers")
+    public ResponseEntity<?> getUsers(){
+
+        List<User> userList = userService.getUsers();
+        return ResponseEntity.ok(userList);
     }
 }

@@ -5,11 +5,13 @@ import com.example.demo.repo.UserRepo;
 import com.example.demo.request.RegisterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class UserService {
-    @Autowired
+   @Autowired
     UserRepo userRepo;
     public int addition(int a, int b) {
         return a + b;
@@ -58,7 +60,15 @@ public class UserService {
         }
         return false;
     }
+    public List<User> getUsers() {
+        //  userRepo.getUserByEmail(registerRequest.getEmail());
+
+        List<User> userList = userRepo.findAll();
+            return userList;
+        }
+
     }
+
 
 
 
