@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { NavLink } from 'react-router-dom';
-
+import Update from './Update';
 function Header() {
   return (
     <div id="header">
