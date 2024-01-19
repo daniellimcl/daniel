@@ -1,0 +1,6 @@
+for eachcontent in os.listdir():
+ file=open(eachcontent,'r')
+ data=file.read()
+ import hashlib
+ #syntax: hashlib.md5(data.encode()).hexdigest()
+ print(hashlib.md5(data.encode()).hexdigest())
